@@ -1,0 +1,109 @@
+/* colores */
+.color_rojo_suave{
+    color:#E16666;
+    background-color:#E16666;
+    }
+    
+    .color_rojo_base{
+        color: #F60000;
+        background-color: #F60000;
+    }
+    
+    .color_rojo_oscuro{
+        color:#620000;
+        background-color:#620000;
+    }
+
+    /* tipografia */
+.alinear_izq{
+    text-align: left;
+}
+
+.alinear_centro{
+    text-align: center;
+}
+
+.alinear_der{
+    text-align: right;
+}
+
+    /* direccion cajas */
+    body{
+        display: flex;
+        flex-direction: column;
+        /* como ahora le hemos dicho que distribuya el espacio en vertical, tenemos que decirle align-items para que nos centre el contenido */
+        align-items: center;
+        padding: 40px 0 0 0;/* este padding es solo en la parte de arriba */
+        /* Con este código todas las cajas tienen la misma medida y estan alineadas al medio */
+    }
+    
+    header, main, footer{
+        width: 900px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Con este código todas las cajas tienen la misma medida y estan alineadas al medio.
+        Si quisieramos mas adelante que alguna de las cajas sea mas grande o mas pequeña, tendriamos que debajo de este, crear un 
+        .header{
+        }
+        y darle otras medidas o otra justify-content*/
+    }
+
+ /* header rectangulo */
+
+  .header_rectangulo{
+        width: 900px;
+        height: 210px;
+    }
+
+    /* main caja de cuadrados */
+    .header_cajaCuadros, .header_cajaCuadros2{
+        display:flex;
+        justify-content: space-between;
+        width: 900px;
+        margin:0;  
+    
+    }
+    /* tamaño de cuadrados */
+
+    .header_cuadro1, .header_cuadro2, .header_cuadro3, .header_cuadro4, .header_cuadro5, .header_cuadro6, .header_cuadro7, .header_cuadro8{
+        width: 210px;
+        height: 210px;
+    }
+
+
+    .linea{
+        height: 20px;
+        width: 900px;
+        /* le tenemos que dar width porque como no esta contenida dentro de ninguna caja, header, main o footer, por eso le damos 900px que es la misma medida que estan los demas */
+        
+    }
+    /* footer */
+    .footer_cajaCirculos{
+    
+        display:flex;
+        justify-content: space-around;
+        width: 900px;
+        margin:0;    
+    }
+
+    .circulo{
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        margin: 0;
+        /* Le quitamos el margin porque figure tiene margenes y si no le quitamos el margin sale un huevo en lugar de un circulo */
+    }
+
+    /* para poner el fondo de color en footer */
+    footer{
+        width:100%;
+        display:flex;
+        align-items: center;
+    }
+    
+
+    /* espacio entre elementos */
+    .espacio{
+        height: 20px;
+    }

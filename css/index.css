@@ -1,69 +1,91 @@
-/* *********************************** */
-/* *** Estilos SOLO para index.html *** */
-/* *********************************** */
-.cajaGeneral{
-    display: flex;
-    justify-content: center;
+/* colores */
+.color_rojo_suave{
+color:#E16666;
+background-color:#E16666;
 }
 
-header{
-    width: 900px;
-    height: 105px;
-    
-}
-
-.primeracaja{
-    display: flex;
-    justify-content: space-between;
-   
-}
-
-.primero{
-    width: 210px;
-    margin: 0px; 
-    
-}
-
-.cuadrado1{
-    height: 210px;
-    background-color: #E16666;
-}
-
-.cuadrado2{
-    width: 440px;
-    height: 440px;
-    background-color: #E16666;
-}
-
-.derecha{
-    text-align: right;
-}
-
-
-p{
-    text-align: center;
-}
-
-.main_linea{
-    height: 10px;
-    background-color: red;
-}
-
-
-
-.main_cajaCirculos{
-
-    display: flex;
-    justify-content: space-around;
-   margin-top: 15px;
-}
-.main_circulo_externo, .main_circulo_interno{
-    width: 210px;
-    height: 210px;
-    border-radius: 50%;
+.color_rojo_base{
+    color: #F60000;
     background-color: #F60000;
 }
 
-.main_circulo_interno{
-    background-color: #620000;
+.color_rojo_oscuro{
+    color:#620000;
+    background-color:#620000;
 }
+
+/* tipografia */
+.alinear_izq{
+    text-align: left;
+}
+
+.alinear_centro{
+    text-align: center;
+}
+
+.alinear_der{
+    text-align: right;
+}
+ 
+/* Todas las cajas */
+body{
+    display: flex;
+    flex-direction: column;
+    /* como ahora le hemos dicho que distribuya el espacio en vertical, tenemos que decirle align-items para que nos centre el contenido */
+    align-items: center;
+    padding: 40px 0 0 0;/* este padding es solo en la parte de arriba */
+    /* Con este código todas las cajas tienen la misma medida y estan alineadas al medio */
+}
+
+header, main, footer{
+    width: 900px;
+    display:flex;
+    justify-content: space-between;
+    /* Con este código todas las cajas tienen la misma medida y estan alineadas al medio.
+    Si quisieramos mas adelante que alguna de las cajas sea mas grande o mas pequeña, tendriamos que debajo de este, crear un 
+    .header{
+    }
+    y darle otras medidas o otra justify-content*/
+}
+
+
+
+
+/* header */
+
+.header_zonaIzq{
+    width: 210px;
+    margin: 0;
+}
+
+.header_zonaIzq_caja, .header_zonaDer_caja{
+    height:210px;
+}
+.header_zonaCentro{
+    width: 440px;
+    height: 440px;
+}
+
+.header_zonaDer{
+    width: 210px;
+    margin: 0;  
+}
+
+/* main */
+
+.linea{
+    height: 20px;
+    width: 900px;
+    /* le tenemos que dar width porque como no esta contenida dentro de ninguna caja, header, main o footer, por eso le damos 900px que es la misma medida que estan los demas */
+    
+}
+/* footer */
+.circulo{
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    margin: 0;
+    /* Le quitamos el margin porque figure tiene margenes y si no le quitamos el margin sale un huevo en lugar de un circulo */
+
+}
+
