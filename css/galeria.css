@@ -57,11 +57,12 @@
     }
 
     /* main caja de cuadrados */
-    .header_cajaCuadros, .header_cajaCuadros2{
+    .header_cajaCuadros{
         display:flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         width: 900px;
-        margin:0;  
+     
     
     }
     /* tamaño de cuadrados */
@@ -69,6 +70,7 @@
     .header_cuadro1, .header_cuadro2, .header_cuadro3, .header_cuadro4, .header_cuadro5, .header_cuadro6, .header_cuadro7, .header_cuadro8{
         width: 210px;
         height: 210px;
+        margin:6px;
     }
 
 
